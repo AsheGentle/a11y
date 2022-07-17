@@ -33,13 +33,19 @@
                     <!--div class="sorting">
                         <div class="sorting__title" id="sorting__title">Сортировать по:</div>
                         <div class="sorting__wrap">
-                            <input type="text">
-                            <div class="sorting__list">
-                                <div class="sorting__list-item"></div>
-                                <div class="sorting__list-item"></div>
-                                <div class="sorting__list-item"></div>
-                                <div class="sorting__list-item"></div>
-                            </div>
+                            <input type="text" id="sorting__input" class="sorting__input"
+                                   role="combobox"
+                                   aria-autocomplete="list"
+                                   aria-haspopup="listbox"
+                                   aria-expanded="true"
+                                   aria-controls="popup_listbox"
+                                   aria-activedescendant="selected_option">
+                            <ul class="sorting__list" role="listbox" id="popup_listbox">
+                                <li role="option" class="sorting__list-item">По возрастанию цены</li>
+                                <li role="option" class="sorting__list-item">По убыванию цены</li>
+                                <li role="option" class="sorting__list-item">По популярности</li>
+                                <li role="option" class="sorting__list-item active">Нет сортировки</li>
+                            </ul>
                         </div>
                     </div-->
                     <div class="products">
@@ -50,11 +56,10 @@
                             <div class="product__description">
                                 <div class="product__title" id="product__title-1">Коврик для кота</div>
                                 <div class="product__price">
-                                    <div aria-hidden="true">
-                                        100$
-                                        <span class="product__price-old">200$</span>
-                                    </div>
-                                    <span class="visually-hidden">100$ вместо 200$</span>
+                                    <span class="visually-hidden">цена со скидкой</span> 100$
+                                    <span class="product__price-old">
+                                        <span class="visually-hidden">старая цена</span> 200$
+                                    </span>
                                 </div>
                                 <div class="product__button">
                                     <button class="btn" data-modal="#order" type="button" aria-labelledby="product__button-1 product__title-1" id="product__button-1">Купить</button>
@@ -68,8 +73,10 @@
                             <div class="product__description">
                                 <div class="product__title" id="product__title-2">Коврик для кошки</div>
                                 <div class="product__price">
-                                    100$
-                                    <span class="product__price-old">200$</span>
+                                    <span class="visually-hidden">цена со скидкой</span> 100$
+                                    <span class="product__price-old">
+                                        <span class="visually-hidden">старая цена</span> 200$
+                                    </span>
                                 </div>
                                 <div class="product__button">
                                     <button class="btn" data-modal="#order" type="button" aria-labelledby="product__button-2 product__title-2" id="product__button-2">Купить</button>
