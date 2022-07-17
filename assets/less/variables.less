@@ -1,0 +1,34 @@
+@accent: #6800B9;
+@dark: #000000;
+@light: #7A7A7A;
+@width-container: 1242px;
+
+.transition() {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.clear() {
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.transform(@var) {
+    -webkit-transform: @var;
+    -ms-transform: @var;
+    transform: @var;
+}

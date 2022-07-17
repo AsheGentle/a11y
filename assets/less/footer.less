@@ -1,0 +1,29 @@
+footer {
+    background-color: #FCFCFC;
+    padding: 68px 0;
+
+    .container {
+        .display-flex();
+        .main-axis-between();
+    }
+}
+
+.footer-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 28px;
+}
+
+.social {
+    .display-flex();
+
+    a {
+        svg {
+            display: block;
+        }
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}

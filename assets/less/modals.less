@@ -1,0 +1,61 @@
+.overflow {
+    overflow: hidden;
+}
+
+.modal {
+    background-color: fade(#D9D9D9, 70%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+
+    &.open {
+        .display-flex();
+        .main-axis-center();
+        .cross-axis-center();
+    }
+}
+
+.modal__content {
+    background-color: #fff;
+    padding: 72px 88px;
+    position: relative;
+    max-height: 90%;
+    max-width: 90%;
+    overflow: auto;
+    width: 550px;
+}
+
+.modal__close {
+    background-color: transparent;
+    background-image: url('../images/icon-close.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 100;
+
+    &:focus {
+        box-shadow: 0 0 0 2px @accent;
+    }
+}
+
+.modal__title {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.modal__subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+}

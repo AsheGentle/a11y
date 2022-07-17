@@ -1,0 +1,44 @@
+header {
+    background-color: #FCFCFC;
+    overflow: hidden;
+}
+
+.skip-link {
+    background-color: @dark;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 24px;
+    padding: 12px 56px;
+    position: absolute;
+    top: -100%;
+    left: 0;
+
+    &:focus {top: 22px;}
+}
+
+.menu {
+    .display-flex();
+    .main-axis-center();
+    list-style: none;
+    margin: 0;
+    padding: 36px 0;
+}
+
+.menu__item {
+    font-size: 18px;
+    margin: 0 6px;
+
+    a {
+        color: @dark;
+        display: block;
+        padding: 4px;
+
+        &:hover {
+            color: @accent;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px @accent;
+        }
+    }
+}
